@@ -9,7 +9,10 @@
     } 
       stage("build"){
        steps {
-      sh "mvn clean package"     
+      sh """mvn clean package
+            whoami
+            pwd
+            ls -l """     
        }   
       }
        stage("upload"){
@@ -20,7 +23,7 @@
        stage("deploy"){
           steps {
           println "i deploy code"
-              
+
           } 
        }
    }  
