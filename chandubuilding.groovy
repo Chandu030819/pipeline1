@@ -17,7 +17,9 @@
       }
        stage("upload"){
          steps {
-         println "i upload artifacts"    
+         println "i upload artifacts" 
+          sh "aws s3 cp target/hello-*.war s3://devops09art2"
+
          }  
        }  
        stage("deploy"){
