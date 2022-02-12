@@ -1,6 +1,8 @@
 pipeline {
     agent any 
      parameters {
+         
+     
         
         // Define string parameter.
         string (
@@ -31,7 +33,7 @@ pipeline {
             stage("upload"){
                 steps{
                     println "upload artifacts"
-                    sh "aws s3 cp target/hello-*.war s3://devops09art2/${env. JOB-NAME}/${codebranch}/${build-number}/
+                    sh "aws s3 cp target/hello-*.war s3://devops09art2/${env. JOB-NAME}/${codebranch}/${build-number}/"
                 }
             }
             stage("deploy"){
