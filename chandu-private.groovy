@@ -5,7 +5,7 @@ pipeline {
         // Define string parameter.
         string (
             name: 'codebranch',
-            defaultValue: '*/dev',
+            defaultValue: '*/main',
             description: 'added dev branch'
        
         )
