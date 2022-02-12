@@ -1,10 +1,7 @@
 pipeline {
     agent any 
      parameters {
-         
-     
-        
-        // Define string parameter.
+         // Define string parameter.
         string (
             name: 'codebranch',
             defaultValue: '*/main',
