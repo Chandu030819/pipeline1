@@ -4,8 +4,8 @@ pipeline {
         
         // Define string parameter.
         string (
-            name: 'CommitId',
-            defaultValue: '*/master',
+            name: 'codebranch',
+            defaultValue: '*/dev',
             description: 'Insert commit id or leave as default to use head'
         )
        
