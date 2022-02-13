@@ -1,14 +1,16 @@
 pipeline {
     agent any 
-     parameters {
-         // Define string parameter.
+    parameters {
+        
+        // Define string parameter.
         string (
-            name: 'codebranch',
-            defaultValue: '*/main',
-            description: 'added dev branch'
-       
+            name: 'CommitId',
+            defaultValue: '*/master',
+            description: 'Insert commit id or leave as default to use head'
         )
+       
     }
+    
              stages{
             stage("clone"){
                 steps{
