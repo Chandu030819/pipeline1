@@ -15,9 +15,9 @@ pipeline {
                 steps{
                 checkout([$class: 'GitSCM', branches: [[name: "${codebranch}"]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'git-auth', url: 'https://github.com/Chandu030819/pvtrepo03.git']]])
                 sh """ls -lart ./*
-                   echo ${env.JOB-NAME}
+                   echo ${env.JOB_NAME}
                    echo ${codebranch}
-                   echo ${build-number} """  
+                   echo ${BUILD_NUMBER} """  
                 
                 }
             }
