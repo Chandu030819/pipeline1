@@ -31,7 +31,7 @@ pipeline {
             stage("upload"){
                 steps{
                     println "upload artifacts"
-                    sh "aws s3 cp target/hello-*.war s3://devops09art2/${env.JOB-NAME}/${codebranch}/${BUILD_NUMBER}/"
+                    sh "aws s3 cp target/hello-*.war s3://devops09art2/${env.JOB_NAME}/${codebranch}/${BUILD_NUMBER}/"
                 }
             }
             stage("deploy"){
