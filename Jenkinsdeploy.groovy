@@ -29,7 +29,7 @@
         steps {
        sh """aws s3 cp s3://devops09art2/${jobName}/${sourceBranch}/${buildNumber}/hello-${buildNumber}.war .
        ls -la
-        scp -oStrictHostKeyChecking=no -i /tmp/chandu09.pem hello-${buildNumber}.war ec2-user@${serverIP}:/var/lib/tomcat/webapps"""     
+        scp -oStrictHostKeyChecking=no -i /tmp/devopsc09mb hello-${buildNumber}.war ec2-user@${serverIP}:/var/lib/tomcat/webapps"""     
         }  
       }   
      }
