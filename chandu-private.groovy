@@ -34,7 +34,7 @@ pipeline {
                     sh "aws s3 cp target/hello-*.war s3://devops09art2/${env.JOB_NAME}/${codebranch}/${BUILD_NUMBER}/"
                 }
             }
-            stage("deploy"){
+            stage("deploy") {
                 steps{
                     println "deploy code"
                 }
